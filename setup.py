@@ -47,7 +47,7 @@ setup(
       ],
     keywords=['molecular beacons','EATR',"CEAM","EXOIII","Target recycling"],
     install_requires=[
-          'biopython','tabulate','regex','joblib',
+          'biopython','tabulate','regex','joblib','argparse',
       ],
     include_package_data=True,
     zip_safe=False

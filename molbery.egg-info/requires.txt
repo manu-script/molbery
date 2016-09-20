@@ -2,3 +2,4 @@ biopython
 tabulate
 regex
 joblib
+argparse

@@ -1,28 +1,79 @@
 .. image:: https://raw.githubusercontent.com/bhagya-ct/molbery/master/molbery.png
+   :height: 100px
+   :width: 350 px
+   :alt: Molbery
 
-A tool for designing Molecular beacons with 3' overhang.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-`Molbery`_ is a python based tool which identifies 29mer probes with 7 bases in stem, 8 in loop and 7 overhang bases from a fasta sequence. This is based on the method developed by Zuo, Xiaolei, et al. [Ref1]_ which is based on Exo III aided target recycling method for nucleic acid signature amplification. It uses the formula suggested by Howley, Peter M., et al. [Ref2]_ for calculation of melting temperature of the probes. Other than general criteria like GC content & Tm, there are special considerations in the property of the probe sequence which are reported to be optimal.
+MOLecular Beacons powered by ExonucleaseIII RecYcling.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`Molbery`_ is a python based tool which identifies 29mer probes with 7 bases in stem, 8 in loop and 7 overhang bases from a fasta sequence. This is based on the method developed by Zuo, Xiaolei, et al. [Ref1]_ which is based on Exo III aided target recycling method for nucleic acid signature amplification. It uses the formula suggested by Howley, Peter M., et al. [Ref2]_ for calculation of melting temperature of the probes. Other than general criteria like GC content & Tm, there are special considerations in the property of the probe sequence which are reported to be optimal. More information will be available after publication of the tool in a scientific journal.
 
 Features
-~~~~~~~~
+--------
 The latest release includes:
 
     supports Fasta & multi-Fasta format
 
-    BLAST connect with parallel execution
-
-    Optional GC content & Tm range
+    Optional GC content, Tm range & Salt Conc.
 
     reStructuredText Output
+    
+    BLAST connect with parallel execution 
+
+    
+Compatibility
+-------------
+ We support both Linux and Windows platforms with the latest major releases of python 2 & 3.
+
+License
+-------
+
+ Molbery is an open source tool available under the OSI approved MIT license.
+
+ Copyright (c) 2016 Bhagya C T
+ 
+ Copyright (c) 2016 Manu S
+
+ Please read the license content `here`_.
+
+Installation
+------------
+
+ All the Python packages required for Molbery will be installed with `pip`_.
+
+ ::
+
+    $ pip install molbery
+    
+ You can manually download the Molbery repository or simply clone it.
+
+ ::
+
+    $ git clone https://github.com/bhagya-ct/molbery
+
+Usage
+-----
+ Refer command help for all available options. 
+ ::
+
+    $ molbery --help
+
+ For a single FASTA input run
+ ::
+
+    $ molbery <path_to_fasta> --blast --out <output> -g <GC_min> -c <GC_max> -t <Tm_min> -m <Tm_max> -s <salt_conc_in_molar_units>
+
+ For a multi-FASTA input run (Output cannot be specified for multiple seq. Default is sequence ID present in multi-FASTA)
+ ::
+
+    $ molbery <path_to_fasta> --multi -g <GC_min> -c <GC_max> -t <Tm_min> -m <Tm_max> -s <salt_conc_in_molar_units>
 
 Sample Output
-~~~~~~~~~~~~~
+-------------
 
-Sequence ID - gid
+ Sequence ID - <gid_of_sequence>
 
 +---------+-------------------------------+----------+----------+---------------+---------------+
-|   Probe | Probes (29mers)               |   GC (%) |   Tm (C) |   Stem Tm (C) |   Loop Tm (C) |
+|   Probe | Molberys (29mer Probes)       |   GC (%) |   Tm (C) |   Stem Tm (C) |   Loop Tm (C) |
 +=========+===============================+==========+==========+===============+===============+
 |       1 | ACCGTAGAGCTACGACTACGGTACATTAC |    48.28 |     69.9 |            22 |            24 |
 +---------+-------------------------------+----------+----------+---------------+---------------+
@@ -35,46 +86,23 @@ Sequence ID - gid
 |       5 | AGATTCGAAGCGAACCGAATCTGCATACG |    48.28 |     69.9 |            20 |            24 |
 +---------+-------------------------------+----------+----------+---------------+---------------+
 
+Note: Blast Outputs are written to <Output>_blast_results/ folder with individual text file for every probe.
+
 Authors and Contributors
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
  The tool is designed and developed by Bhagya C T, Scientist-Biotechnology, Omix  Research & Diagnostics Labs and Manu S, Institute of Bioinformatics & Applied Biotechnology. The authors are grateful to Dr. Sudeshna Adak, CEO & Director, Omix Research & Diagnostics Labs for providing important technical supervision and discussions.
 
 Source code
-~~~~~~~~~~~
+-----------
 
- The source codes of Molbery are available via git
- https://github.com/bhagya-ct/molbery
+ The source codes of Molbery are available
 
-Compatibility
--------------
- We support both Linux and Windows platforms with the latest major releases of python 2 & 3.
-
-License
--------
-
- Molbery is an open source tool available under the MIT license.
-
- Copyright (c) 2016 Bhagya C T
+ via git: https://github.com/bhagya-ct/molbery
  
- Copyright (c) 2016 Manu S
+ via Pypi: https://pypi.python.org/pypi/molbery
 
- Please read the license content `here`_.
 
-Installation
-------------
-
- All the Python packages required for Molbery will be installed with pip.
-
- ::
-
-    $ pip install molbery
-    
- You can manually download the Molbery repository or simply clone it.
-
- ::
-
-    $ git clone https://github.com/bhagya-ct/molbery
 
 Credits
 -------
@@ -102,6 +130,7 @@ References
 .. [Ref2] Howley, P. M., Israel, M. A., Law, M. F., & Martin, M. A. (1979). A rapid method for detecting and mapping homology between heterologous DNAs. Evaluation of polyomavirus genomes. Journal of Biological Chemistry, 254(11), 4876-4883.
 .. _here: https://github.com/bhagya-ct/molbery/blob/master/LICENSE
 .. _page: https://github.com/bhagya-ct/molbery/issues
+.. _pip: https://pypi.python.org/pypi/pip
 .. _joblib: https://pypi.python.org/pypi/joblib
 .. _argparse: https://pypi.python.org/pypi/argparse
 .. _tabulate: https://pypi.python.org/pypi/tabulate

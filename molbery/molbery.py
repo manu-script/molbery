@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__version__ = "1.0"
+__version__ = "1.0.1"
 
 try:
     import sys
@@ -81,7 +81,7 @@ def find_probes(rec,args):
                 probes.append(key)
                 cnt=cnt+1
                       
-    headers = ["Probe","Probes (29mers)", "GC (%)", "Tm (C)", "Stem Tm (C)", "Loop Tm (C)"]
+    headers = ["Probe","Molberys (29mer Probes)", "GC (%)", "Tm (C)", "Stem Tm (C)", "Loop Tm (C)"]
     output.write(tabulate(table, headers, tablefmt="grid"))                       
     output.close()
     sys.stdout.write("Results written to "+out+"\n")
