@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: molbery
-Version: 1.0.2
+Version: 1.0.3
 Summary: A tool for Molecular biologists to design modified Molecular Beacons which works on Exonuclease III Aided Target Recycling strategy for the detection of nucleic acid signatures.
 Home-page: https://github.com/bhagya-ct/molbery
 Author: Manu S
@@ -43,12 +43,19 @@ Description: .. image:: https://raw.githubusercontent.com/bhagya-ct/molbery/mast
         Installation
         ------------
         
-         All the Python packages required for Molbery will be installed with `pip`_.
-        
+         All the Python packages required for Molbery will be installed with `pip`_. 
+         
+         Run cmd with Administrator permissions in Windows.
          ::
         
             $ pip install molbery
             
+         Run command with sudo permissions in Linux. 
+         ::
+        
+            $ sudo pip install molbery
+        
+        
          You can manually download the Molbery repository or simply clone it.
         
          ::
@@ -57,7 +64,7 @@ Description: .. image:: https://raw.githubusercontent.com/bhagya-ct/molbery/mast
         
         Usage
         -----
-         Refer command help for all available options. 
+         After succesful installation refer command help for all available options. 
          ::
         
             $ molbery --help

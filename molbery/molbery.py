@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__version__ = "1.0.2"
+__version__ = "1.0.3"
 
 try:
     import sys
@@ -39,7 +39,7 @@ def find_probes(rec,args):
         seq_id=''.join(str(rec.id).split())
     else:
         seq_id=args.out
-    nt_seq=str(rec.seq)
+    nt_seq=str(rec.seq).upper()
     out=seq_id+".rst"
     output=open(out,'w')                                #Prompting and opening file in write mode
     output.write("Sequence ID - "+rec.id+"\n\n")

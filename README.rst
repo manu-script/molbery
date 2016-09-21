@@ -35,12 +35,19 @@ License
 Installation
 ------------
 
- All the Python packages required for Molbery will be installed with `pip`_.
-
+ All the Python packages required for Molbery will be installed with `pip`_. 
+ 
+ Run cmd with Administrator permissions in Windows.
  ::
 
     $ pip install molbery
     
+ Run command with sudo permissions in Linux. 
+ ::
+
+    $ sudo pip install molbery
+
+
  You can manually download the Molbery repository or simply clone it.
 
  ::
@@ -49,7 +56,7 @@ Installation
 
 Usage
 -----
- Refer command help for all available options. 
+ After succesful installation refer command help for all available options. 
  ::
 
     $ molbery --help
