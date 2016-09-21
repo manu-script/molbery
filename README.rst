@@ -19,7 +19,7 @@ The latest release includes:
     
 Compatibility
 -------------
- We support both Linux and Windows platforms with the latest major releases of python 2 & 3.
+ Molbery is a cross platform tool which runs on Windows, Linux and OS X with the latest major releases of python 2 & 3.
 
 License
 -------
@@ -42,7 +42,7 @@ Installation
 
     $ pip install molbery
     
- Run command with sudo permissions in Linux. 
+ Run command with sudo permissions in Linux and OS X. 
  ::
 
     $ sudo pip install molbery
@@ -118,6 +118,16 @@ Thanks to the Pythonistas for some wonderful plugin modules and libraries which 
   * `tabulate`_
   * `regex`_
   * `biopython`_
+
+FAQs
+----
+ Q1) pip command not found?
+ 
+  Ans. You probably don't have the latest release of Python. Update Python or install `pip`_.
+
+ Q2) Installation was successful but could not find molbery command?
+
+  Ans. You would not have given Admin or sudo permissions while installing. Run pip uninstall molbery and reinstall with Admin or sudo permissions.  
 
 Bugs
 ----
