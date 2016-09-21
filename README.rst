@@ -1,7 +1,4 @@
 .. image:: https://raw.githubusercontent.com/bhagya-ct/molbery/master/molbery.png
-   :height: 100px
-   :width: 350 px
-   :alt: Molbery
 
 MOLecular Beacons powered by ExonucleaseIII RecYcling.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +62,7 @@ Usage
  For a multi-FASTA input run (Output cannot be specified for multiple seq. Default is sequence ID present in multi-FASTA)
  ::
 
-    $ molbery <path_to_fasta> --multi -g <GC_min> -c <GC_max> -t <Tm_min> -m <Tm_max> -s <salt_conc_in_molar_units>
+    $ molbery <path_to_fasta> --blast --multi -g <GC_min> -c <GC_max> -t <Tm_min> -m <Tm_max> -s <salt_conc_in_molar_units>
 
 Sample Output
 -------------

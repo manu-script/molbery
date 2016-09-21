@@ -1,15 +1,12 @@
 Metadata-Version: 1.1
 Name: molbery
-Version: 1.0.1
+Version: 1.0.2
 Summary: A tool for Molecular biologists to design modified Molecular Beacons which works on Exonuclease III Aided Target Recycling strategy for the detection of nucleic acid signatures.
 Home-page: https://github.com/bhagya-ct/molbery
 Author: Manu S
 Author-email: manuvaivasvata7@gmail.com
 License: UNKNOWN
 Description: .. image:: https://raw.githubusercontent.com/bhagya-ct/molbery/master/molbery.png
-           :height: 100px
-           :width: 350 px
-           :alt: Molbery
         
         MOLecular Beacons powered by ExonucleaseIII RecYcling.
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,7 +70,7 @@ Description: .. image:: https://raw.githubusercontent.com/bhagya-ct/molbery/mast
          For a multi-FASTA input run (Output cannot be specified for multiple seq. Default is sequence ID present in multi-FASTA)
          ::
         
-            $ molbery <path_to_fasta> --multi -g <GC_min> -c <GC_max> -t <Tm_min> -m <Tm_max> -s <salt_conc_in_molar_units>
+            $ molbery <path_to_fasta> --blast --multi -g <GC_min> -c <GC_max> -t <Tm_min> -m <Tm_max> -s <salt_conc_in_molar_units>
         
         Sample Output
         -------------
