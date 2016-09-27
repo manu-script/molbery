@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__version__ = "1.0.4"
+__version__ = "1.0.5"
 
 try:
     import sys
@@ -96,8 +96,10 @@ def find_probes(rec,args):
                 makedirs(seq_id+"_blast_results")
 
         to_blast=[(seq_id,j,probes[j])for j in range(len(probes))]
-        Parallel(n_jobs=len(to_blast), verbose=25)(delayed(blast_probes)(i)for i in to_blast)           #Parallel processes for blasting probes
-    
+        try:
+                Parallel(n_jobs=len(to_blast), verbose=25)(delayed(blast_probes)(i)for i in to_blast)           #Parallel processes for blasting probes
+        except:
+                print "Blast request could not be completed. Check Network connection and try again!"
 
 def main():
         #Argument parsing 

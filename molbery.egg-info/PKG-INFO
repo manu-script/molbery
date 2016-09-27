@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: molbery
-Version: 1.0.4
+Version: 1.0.5
 Summary: A tool for Molecular biologists to design modified Molecular Beacons which works on Exonuclease III Aided Target Recycling strategy for the detection of nucleic acid signatures.
 Home-page: https://github.com/bhagya-ct/molbery
 Author: Manu S
