@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-__version__ = "1.0.5"
+__version__ = "1.0.6"
 
 try:
     import sys
@@ -17,7 +17,7 @@ try:
     from shutil import rmtree
     from regex import findall,search
 except:
-    sys.stdout.write("Some of the modules could not be loaded! Dependencies not met.\n")
+    sys.stderr.write("Some of the modules could not be loaded! Dependencies not met.\n")
     raise SystemExit
 
 def blast_probes(arg):
@@ -99,7 +99,7 @@ def find_probes(rec,args):
         try:
                 Parallel(n_jobs=len(to_blast), verbose=25)(delayed(blast_probes)(i)for i in to_blast)           #Parallel processes for blasting probes
         except:
-                print "Blast request could not be completed. Check Network connection and try again!"
+                sys.stderr.write("Blast request could not be completed. Check Network connection and try again!")
 
 def main():
         #Argument parsing 
@@ -119,10 +119,10 @@ def main():
         args = parser.parse_args()
 
         if args.g > args.c:
-                sys.stdout.write("Minimum GC content cannot be greater than maximum.\nDefault:\nGC_min = 38\nGC_max=65\n")
+                sys.stderr.write("Minimum GC content cannot be greater than maximum.\nDefault:\nGC_min = 38\nGC_max=65\n")
                 raise SystemExit
         if args.t > args.m:
-                sys.stdout.write("Lower bound of Tm cannot be greater than upper bound.\nDefault:\nTm_min=65\nTm_max=75\n")
+                sys.stderr.write("Lower bound of Tm cannot be greater than upper bound.\nDefault:\nTm_min=65\nTm_max=75\n")
                 raise SystemExit
 
         try:
@@ -130,7 +130,7 @@ def main():
                 records = list(SeqIO.parse(fhand, "fasta"))
                 fhand.close()
         except IOError as e:
-                sys.stdout.write("Error opening file! I/O error("+str(e.errno)+"): "+str(e.strerror)+"\n")
+                sys.stderr.write("Error opening file! I/O error("+str(e.errno)+"): "+str(e.strerror)+"\n")
                 raise SystemExit
 
         if args.multi:
