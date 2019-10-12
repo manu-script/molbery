@@ -2,7 +2,7 @@
 
 MOLecular Beacons powered by ExonucleaseIII RecYcling.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-`Molbery`_ is a python based tool which identifies 29mer probes with 7 bases in stem, 8 in loop and 7 overhang bases from a fasta sequence. This is based on the method developed by Zuo, Xiaolei, et al. [Ref1]_ which descibes an Exo III aided target recycling method for nucleic acid signature amplification. It uses the formula suggested by Howley, Peter M., et al. [Ref2]_ for calculation of melting temperature of the probes. Other than general criteria like GC content & Tm, there are special considerations in the property of the probe sequence which are reported to be optimal. More information will be available after publication of the tool in a scientific journal.
+`Molbery`_ is a python based tool which identifies 29mer probes with 7 bases in stem, 8 in loop and 7 overhang bases from a fasta sequence. This is based on the method developed by Zuo, Xiaolei, et al. [Ref1]_ which descibes an Exo III aided target recycling method for nucleic acid signature amplification. It uses the formula suggested by Howley, Peter M., et al. [Ref2]_ for calculation of melting temperature of the probes. Other than general criteria like GC content & Tm, there are special considerations in the property of the probe sequence which are reported to be optimal.
 
 Features
 --------
